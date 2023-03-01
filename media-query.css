@@ -5,7 +5,6 @@
     /* changing the background glow effects for desktop view */
 
     body {
-        padding-left: 5em;
         background-image: url('./backgroundtop-desktop.png'), url('./backgroundbottom-desktop.png');
     }
 
@@ -120,7 +119,6 @@
 
     /* ======================================== About page styling Start ================================= */
     .about-landing-page {
-        transform: translateY(-2em);
     }
 
     .about-landing-page .about-question {
@@ -174,7 +172,6 @@
     /* =========================== Article page styling START ============================================ */
 
     .article-landing-area {
-        transform: translateY(0);
     }
 
     .article-landing-area .article-main-heading {
@@ -217,7 +214,6 @@
     /* ===========================  Resource page styling END ============================================= */
 
     .resources-landing-area {
-        transform: translateY(0em);
     }
 
     .resources-landing-area .resouces-main-heading {
@@ -277,10 +273,12 @@
     }
 
     .contact-page {
-        transform: translateY(.5em);
         max-width: 60em;
         align-items: start;
-        padding: 0;
+    }
+
+    .contact-page .contact-heading {
+        margin-left: 1.5em;
     }
 
     .contact-page .contact-description {

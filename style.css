@@ -46,25 +46,26 @@ body {
     background-size: 100%,100%;
     color: var(--white);
     position: relative;
-    padding: 3em 2em;
+    
 }
 
 main {
-    min-height: 100svh;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    padding: 3em 2em;
 }
 
-section {
-    transform: translateY(-2em);
-}
 
 img {
     max-width: 30em;
     width: 100%;
     pointer-events: none;
+}
+
+section {
+    padding: 3em 0;
 }
 
 video {
@@ -89,9 +90,7 @@ svg {
 }
 
 footer {
-    position: absolute;
-    bottom: 0;
-    left: 0;
+
     background-color: var(--dark-gray);
     width: 100%;
     text-align: center;
@@ -421,14 +420,12 @@ nav input:checked + .nav-button-container .background-blur {
 
 .article-landing-area {
     padding-bottom: 6em;
-    transform: translateY(1em);
 }
 
 .article-landing-area .article-main-heading {
     position: relative;
     font-weight: 600;
     text-align: center;
-    margin-top: 2em;
     color: var(--purple);
     text-transform: capitalize;
 }
@@ -517,13 +514,11 @@ nav input:checked + .nav-button-container .background-blur {
 
 /* =================================== Resoruces page styling START =============================== */
 .resources-landing-area{
-    transform: translateY(1em);
 }
 
 .resources-landing-area .resouces-main-heading {
     text-align: center;
     color: var(--purple);
-    margin: 1.5em 0;
     text-transform: capitalize;
 }
 
@@ -583,9 +578,6 @@ nav input:checked + .nav-button-container .background-blur {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    overflow: hidden;
-    padding: 3em 0 6em 0;
-    transform: translateY(1em);
 }
 
 .contact-page .contact-heading {
