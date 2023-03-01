@@ -1,0 +1,693 @@
+/* setting CSS custom variables */
+
+:root {
+    --dark-black: rgb(9, 8, 12);
+    --purple: rgb(103, 106, 235);
+    --dark-pruple: #282957;
+    --darktransparent-purple: #232442;
+    --dark-gray: rgb(32, 29, 43);
+    --gray: rgba(84, 77, 109, 0.555);
+    --white: rgb(255, 255, 255);
+    --magenta-pink: rgb(156, 81, 255);
+}
+
+
+
+@font-face {
+    font-family: "Inter";
+    src: url('./Inter-VariableFont.ttf') format('truetype');
+}
+
+/* Resetting the default values for better control */
+
+html {
+    box-sizing: border-box;
+    font-family: Inter;
+    font-size: 1em;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    background-color: var(--dark-black);
+    background-image: url('./backgrundtop-mobile.png'), url('./backgroundbottom-mobile.png');
+    background-repeat: no-repeat no-repeat;
+    background-position: top right, bottom left;
+    background-size: 100%,100%;
+    color: var(--white);
+    position: relative;
+    padding: 3em 2em;
+}
+
+main {
+    min-height: 100svh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+section {
+    transform: translateY(-2em);
+}
+
+img {
+    max-width: 30em;
+    width: 100%;
+    pointer-events: none;
+}
+
+video {
+    max-width: 35em;
+    width: 100%;
+    border-radius: .6em;
+}
+
+
+
+audio {
+    border: .15em solid var(--purple);
+    box-shadow: 0 0 1em .1em var(--purple);
+    border-radius: 2em;
+}
+
+
+svg {
+    width: 1.5em;
+    color: var(--white);
+    transition: .5s ease-in-out;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: var(--dark-gray);
+    width: 100%;
+    text-align: center;
+    padding: 2em;
+    font-size: .8rem;
+    color: rgba(255, 255, 255, 0.4);
+}
+
+
+/* universal button style START */
+
+.button {
+    background-color: var(--purple);
+    padding: .7em 4.4em;
+    color: var(--white);
+    cursor: pointer;
+    font-weight: 500;
+    border-radius: .5em;
+    font-family: Inter;
+    border: .15em solid var(--purple);
+    transition: background-color .3s ease-in-out;
+}
+
+.button:hover {
+    background-color: transparent;
+}
+
+.link-btn {
+    text-decoration: none;
+}
+
+/* universal button style End */
+
+/*======================== Navigation button/menue syling Start ============================== */
+
+
+
+nav .nav-button {
+    background-color: var(--dark-pruple);
+    padding: .5em 1em  1em 1em;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: .3em;
+    border-radius: 0 0 2em 2em;
+    cursor: pointer;
+    width: 4.5em;
+    opacity: 1;
+    transition: opacity .5s ease-in-out;
+}
+
+.nav-button::after {
+    content: "";
+    height: 2em;
+    width: 2em;
+    position: absolute;
+    top: 0em;
+    left: -1.8em;
+    border-top-right-radius: 100%;
+    box-shadow: .3em -.5em 0 .1em var(--dark-pruple);
+}
+
+.nav-button::before {
+    content: "";
+    height: 2em;
+    width: 2em;
+    position: absolute;
+    top: 0em;
+    right: -1.8em;
+    border-top-left-radius: 100%;
+    box-shadow: -.3em -.5em 0 .1em var(--dark-pruple);
+}
+
+nav .nav-button .line {
+    width: 1.79em;
+    border-radius: 1em;
+    height: .26em;
+    background-color: var(--purple);
+}
+
+nav .nav-button .line-2 {
+    width: 1.34em;
+}
+
+nav input {
+    display: none;
+}
+
+nav .nav-menue {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    padding: 1em;
+    border-radius: 0 0 1em 1em;
+    transform: translateY(-4em);
+    transition: .5s ease-in-out;
+    z-index: 10;
+    background-color: var(--dark-gray);
+    border-bottom: .2em solid var(--purple);
+}
+
+nav .nav-menue .nav-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3em;
+    list-style-type: none;
+}
+
+.nav-list .list-link:active svg  {
+    color: var(--purple);
+}
+
+
+/* setting background blur on navigatiion menu active */
+nav .nav-button-container .background-blur {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(18, 18, 18, .35);
+    backdrop-filter: blur(.18em);
+    z-index: 9;
+    visibility: hidden;
+    opacity: 0;
+    transition: .5s ease-in-out;
+}
+
+
+/* revealing menu when the menu button is clicked */
+nav input:checked ~ .nav-menue{
+    transform: translateY(0);
+}
+
+nav input:checked ~ .nav-button-container > .nav-button{
+    opacity: 0;
+}
+
+nav input:checked + .nav-button-container .background-blur {
+    visibility: visible;
+    opacity: 1;
+}
+
+
+/* ================================= Navigation button/menue syling END  =================================*/
+
+
+/* ================================= Home page styling START ======================================== */
+
+.home-landing-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.home-landing-area .homepage-decorative-image {
+    max-width: 22em;
+    padding-bottom: 1em;
+    
+}
+
+.home-landing-area .text-area {
+    text-align: center;
+}
+
+.home-landing-area .heading-main {
+    font-size: .9rem;
+    letter-spacing: .1em;
+    font-weight: 700;
+    text-transform: uppercase;
+    position: relative;
+    display: inline-block;
+    color: var(--purple);
+    margin: 2em -1em 1em 0;
+}
+
+.home-landing-area .heading-secondary {
+    font-size: 1.7rem;
+    text-align: center;
+    text-transform: uppercase;
+    max-width: 12em;
+    padding: 1em 0 2em 0;
+    margin: auto;
+    animation: fade-in 3s ease-in-out;
+}
+
+/* selection style for the elements */
+
+:is(.home-landing-area .heading-secondary , .home-landing-area .heading-main, .home-landing-area .heading-secondary > span)::selection {
+    background-color: var(--dark-pruple);
+}
+
+.home-landing-area .homepage-decorative-image::selection {
+    background-color: transparent;
+}
+
+.home-landing-area .heading-secondary > span {
+    color: var(--purple);
+}
+
+/* flickering heading line */
+
+.heading-main::before {
+    content: "";
+    top: 45%;
+    left: -1.65em;
+    position: absolute;
+    width: .9em;
+    height: .14em;
+    background-color: var(--white);
+    animation: flickering 1.3s infinite ease-in-out;
+    background-color: var(--purple);
+    box-shadow: 0 0 .1em black;
+}
+
+/* =================================== Home page styling END ===================================== */
+
+
+
+/* ================================= About page styling START ===================================== */
+
+.about-landing-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.about-landing-page .about-question {
+    font-size: 1rem;
+    font-weight: 600;
+    position: relative;
+    color: var(--purple);
+    text-shadow: 0 0 .5em black;
+}
+
+
+.about-landing-page .aboutdescription {
+    margin: 4em 0 3em 0;
+    font-size: .9rem;
+    font-weight: 500;
+    line-height: 1.8;
+    padding: 1.5em;
+    background-color: rgba(103, 106, 235, .2);
+    border-left: .4em solid var(--purple);
+    border-radius: .8em;
+    max-width: 45em;
+}
+
+
+.about-landing-page .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.about-landing-page .content .about-video {
+    margin: 2em 0 0 0;
+    border-bottom: .18em solid var(--purple);
+}
+
+
+.about-landing-page .content .quote-container {
+    max-width: 35em;
+    font-weight: 600;
+}
+
+.about-landing-page .content .quote-container .q-wrapper {
+    margin-bottom: .5em;
+}
+
+.about-landing-page .content .quote-container .author {
+    color: var(--purple);
+    position: relative;
+    font-size: 0.8rem;
+}
+
+/* setting line style before quote author name */
+
+.about-landing-page .content .quote-container .author:before {
+    content: "";
+    top: 45%;
+    left: -1.65em;
+    position: absolute;
+    width: .9em;
+    height: .14em;
+    border-radius: 1em;
+    background-color: var(--white);
+    background-color: var(--purple);
+    box-shadow: 0 0 .1em black;
+}
+
+.about-landing-page .content .quote{
+    line-height: 2;
+    font-size: .9rem;
+}
+
+.about-landing-page .content .quote-container .q-wrapper > svg{
+    color: var(--purple);
+    font-size: .7rem;
+}
+
+/* setting quotation mark for the quote */
+
+.about-landing-page .content .quote-container .q-wrapper > svg:first-child{
+    margin-right: 1em;
+}
+.about-landing-page .content .quote-container .q-wrapper > svg:last-child{
+    transform: translateY(1em);
+    margin-left: 1em;
+}
+
+.about-landing-page .content .quote:after, .about-landing-page .content .quote:before {
+    display: none;
+}
+
+/* =================================== About page styling end =============================== */
+
+/* =========================== Article page styling START ============================================ */
+
+.article-landing-area {
+    padding-bottom: 6em;
+    transform: translateY(1em);
+}
+
+.article-landing-area .article-main-heading {
+    position: relative;
+    font-weight: 600;
+    text-align: center;
+    margin-top: 2em;
+    color: var(--purple);
+    text-transform: capitalize;
+}
+
+
+.article-landing-area .article-container .card {
+    background-color: var(--darktransparent-purple);
+    padding: 1.2em;
+    border-radius: .8em;
+    max-width: 20em;
+    display: flex;
+    flex-direction: column;
+    margin: 3em 0;
+    border: .18em solid var(--dark-pruple);
+}
+
+
+.article-landing-area .article-container .card .article-img {
+    border-radius: .6em;
+    max-width: 100%;
+}
+
+.article-landing-area .article-container .card .article-heading {
+    font-size: 1.2rem;
+    padding: 1.5em .3em;
+    text-align: center;
+    font-weight: 600;
+    color: var(--white);
+}
+
+
+.article-landing-area .article-container .card  label {
+    cursor: pointer;
+    width: fit-content;
+    padding: .5em .8em;
+    font-size: .9rem;
+    margin: 1em auto;
+}
+
+
+
+.article-landing-area .article-container .card .transcript-audio {
+    width: 15em;
+    max-width: 100%;
+    display: block;
+    margin: 2em auto .5em auto;
+}
+
+.article-landing-area .article-container .card .paragraph-container{
+    display: none;
+
+}
+
+.article-landing-area .article-container .card .paragraph-container p {
+    margin: 1.5em 0;
+    font-weight: 300;
+    line-height: 1.5;
+}
+
+.article-landing-area .article-container .card .hide-transcript {
+    display: none;
+}
+
+.article-landing-area .article-container .card .toggle {
+    cursor: pointer;
+    text-align: center;
+    font-size: .9rem;
+    font-family: Inter;
+    font-weight: 500;
+    padding: .8em 0em;
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.article-landing-area .article-container .card .toggle:focus ~ .paragraph-container, .article-landing-area .article-container .card .show-transcript:focus ~ .hide-transcript {
+    display: block;
+
+}
+
+.article-landing-area .article-container .card .toggle:focus {
+    outline: none;
+}
+
+/* =========================== Article page styling END ============================================ */
+
+
+/* =================================== Resoruces page styling START =============================== */
+.resources-landing-area{
+    transform: translateY(1em);
+}
+
+.resources-landing-area .resouces-main-heading {
+    text-align: center;
+    color: var(--purple);
+    margin: 1.5em 0;
+    text-transform: capitalize;
+}
+
+.resources-landing-area {
+    max-width: 65em;
+}
+
+.resources-landing-area .txt-area .web-direct-link{
+    font-weight: 600;
+    text-align: center;
+    text-decoration: underline;
+    color: var(--white);
+    transition: .3s ease-in-out;
+}
+
+.resources-landing-area .txt-area .web-direct-link h2 {
+    margin: 1.5em 0 1em 0;
+    text-transform: capitalize;
+}
+  
+.resources-landing-area .description {
+    font-size: 1rem;
+    font-weight: normal;
+    background-color: var(--dark-pruple);
+    padding: 1rem;
+    border-radius: 0.5em;
+    line-height: 1.5;
+}
+
+.resources-landing-area .website-img {
+    margin: 2rem 0 6rem 0;
+    border-top: 1px solid var(--purple);
+    border-left: 1px solid var(--purple);
+    padding: 1rem;
+    border-radius: 25px;
+}
+
+.resources-landing-area .website-img.reversed {
+    border-right: 1px solid var(--purple);
+    border-left: none;
+}
+
+.resources-landing-area .txt-area .web-direct-link:hover {
+    color: var(--purple);
+    text-decoration: none;
+  }
+
+/* =================================== Resoruces page styling END =============================== */
+
+
+
+
+/* =================================== Contact page styling Start ============================= */
+
+.contact-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    padding: 3em 0 6em 0;
+    transform: translateY(1em);
+}
+
+.contact-page .contact-heading {
+    color: var(--purple);
+    position: relative;
+    font-weight: 700;
+}
+
+.contact-page .contact-description {
+    padding: 1.5em 0 0 0;
+    line-height: 1.6;
+    font-size: 1.1rem;
+    text-align: center;
+    font-weight: 500;
+}
+
+.contact-page .contact-content .contact-text-container .join-img {
+    transform: scale(1.5);
+}
+
+.contact-page .contact-content .social-link-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-page .contact-content .social-link-container .qr-img {
+    max-width: 13em;
+    display: block;
+    margin: 3em auto 0 auto;
+    border: .3em solid var(--purple);
+    border-radius: 1.5em;
+    position: relative;
+}
+
+.contact-page .contact-content .social-link-container .input-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-page .contact-content .social-link-container .input-container button {
+    font-size: 1rem;
+    letter-spacing: .03em;
+    font-weight: 300;
+    padding: .7em .5em;
+    border-radius: .7em;
+    max-width: 8em;
+    margin: 0 auto;
+    transition: .3s ease-in-out;
+    transform: translateY(1em);
+}
+
+.contact-page .contact-content .social-link-container .input-container button:hover {
+    background-color: var(--dark-pruple);
+    box-shadow: 0 0 .5em .05em var(--purple);
+
+}
+
+.contact-page .contact-content .social-link-container .input-container input {
+    border: none;
+    border-radius: .7em;
+    font-size: 1rem;
+    font-family: Inter;
+    font-weight: 500;
+    background-color: var(--gray);
+    color: var(--white);
+    transition: .5s ease;
+    padding: 1em;
+}
+
+.contact-page .contact-content .social-link-container .input-container input:focus {
+    outline: .15em solid var(--purple);
+}
+
+.contact-page .contact-content .social-link-container .newsletter .news-letter-heading{
+    text-align: center;
+    font-weight: 600;
+    padding: 3em 1em 1.5em 0;
+}
+
+/* setting styled line before join heading */
+
+.contact-page .contact-heading::before {
+    content: "";
+    top: 45%;
+    left: -1.25em;
+    position: absolute;
+    width: .8em;
+    height: .095em;
+    border-radius: 1em;
+    background-color: var(--white);
+    background-color: var(--purple);
+    box-shadow: 0 0 .1em black;
+    animation: flickering 1.3s infinite ease-in-out;
+}
+
+
+/* ===========================  Contact page styling END ============================================= */
+
+
+
+
+
+          /* :::::::::::::::::::::::::: END OF CSS ::::::::::::::::::::::::::: */

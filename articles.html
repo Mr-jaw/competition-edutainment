@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Articles | Edutainment</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="media-query.css">
+    <link rel="stylesheet" href="animation.css">
+  </head>
+  <body>
+    <main>
+      <!-- ===================== Navigation HTML markup START ========================== -->
+      <nav>
+        <!-- Nav hamburger button -->
+        <input type="checkbox" id="menue" aria-hidden="true"/>
+        <div class="nav-button-container">
+          <label class="nav-button" role="button" for="menue">
+            <span class="line line-1"></span>
+            <span class="line line-2"></span>
+            <span class="line line-3"></span>
+          </label>
+          <div class="background-blur"></div>
+        </div>
+
+        <!-- nav menue -->
+
+        <label class="nav-menue" for="menue">
+          <ul class="nav-list">
+            <li class="list-item" aria-label="Home">
+              <a href="index.html" class="list-link" aria-label="home"
+                ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                  <path
+                    fill="currentColor"
+                    d="M575.8 255.5c0 18-15 32.1-32 32.1h-32l.7 160.2c0 2.7-.2 5.4-.5 8.1V472c0 22.1-17.9 40-40 40H456c-1.1 0-2.2 0-3.3-.1c-1.4 .1-2.8 .1-4.2 .1H416 392c-22.1 0-40-17.9-40-40V448 384c0-17.7-14.3-32-32-32H256c-17.7 0-32 14.3-32 32v64 24c0 22.1-17.9 40-40 40H160 128.1c-1.5 0-3-.1-4.5-.2c-1.2 .1-2.4 .2-3.6 .2H104c-22.1 0-40-17.9-40-40V360c0-.9 0-1.9 .1-2.8V287.6H32c-18 0-32-14-32-32.1c0-9 3-17 10-24L266.4 8c7-7 15-8 22-8s15 2 21 7L564.8 231.5c8 7 12 15 11 24z"
+                  /></svg
+              ></a>
+            </li>
+            <li class="list-item" aria-label="About">
+              <a href="about.html" class="list-link" aria-hidden="true"
+                ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                  <path
+                    fill="currentColor"
+                    d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM216 336h24V272H216c-13.3 0-24-10.7-24-24s10.7-24 24-24h48c13.3 0 24 10.7 24 24v88h8c13.3 0 24 10.7 24 24s-10.7 24-24 24H216c-13.3 0-24-10.7-24-24s10.7-24 24-24zm40-208a32 32 0 1 1 0 64 32 32 0 1 1 0-64z"
+                  /></svg
+              ></a>
+            </li>
+            <li class="list-item" aria-label="Blog posts">
+              <a href="articles.html" class="list-link" aria-hidden="true"
+                ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                  <path
+                    fill="currentColor"
+                    d="M249.6 471.5c10.8 3.8 22.4-4.1 22.4-15.5V78.6c0-4.2-1.6-8.4-5-11C247.4 52 202.4 32 144 32C93.5 32 46.3 45.3 18.1 56.1C6.8 60.5 0 71.7 0 83.8V454.1c0 11.9 12.8 20.2 24.1 16.5C55.6 460.1 105.5 448 144 448c33.9 0 79 14 105.6 23.5zm76.8 0C353 462 398.1 448 432 448c38.5 0 88.4 12.1 119.9 22.6c11.3 3.8 24.1-4.6 24.1-16.5V83.8c0-12.1-6.8-23.3-18.1-27.6C529.7 45.3 482.5 32 432 32c-58.4 0-103.4 20-123 35.6c-3.3 2.6-5 6.8-5 11V456c0 11.4 11.7 19.3 22.4 15.5z"
+                  /></svg
+              ></a>
+            </li>
+            <li class="list-item" aria-label="Resources">
+              <a href="resources.html" class="list-link"
+                ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
+                  <path
+                    fill="currentColor"
+                    d="M192 64C86 64 0 150 0 256S86 448 192 448H448c106 0 192-86 192-192s-86-192-192-192H192zM496 248c-22.1 0-40-17.9-40-40s17.9-40 40-40s40 17.9 40 40s-17.9 40-40 40zm-24 56c0 22.1-17.9 40-40 40s-40-17.9-40-40s17.9-40 40-40s40 17.9 40 40zM168 200c0-13.3 10.7-24 24-24s24 10.7 24 24v32h32c13.3 0 24 10.7 24 24s-10.7 24-24 24H216v32c0 13.3-10.7 24-24 24s-24-10.7-24-24V280H136c-13.3 0-24-10.7-24-24s10.7-24 24-24h32V200z"
+                  />
+                </svg>
+              </a>
+            </li>
+            <li class="list-item" aria-label="join us">
+              <a href="contact.html" class="list-link"
+                ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
+                  <path
+                    fill="currentColor"
+                    d="M208 352c114.9 0 208-78.8 208-176S322.9 0 208 0S0 78.8 0 176c0 38.6 14.7 74.3 39.6 103.4c-3.5 9.4-8.7 17.7-14.2 24.7c-4.8 6.2-9.7 11-13.3 14.3c-1.8 1.6-3.3 2.9-4.3 3.7c-.5 .4-.9 .7-1.1 .8l-.2 .2 0 0 0 0C1 327.2-1.4 334.4 .8 340.9S9.1 352 16 352c21.8 0 43.8-5.6 62.1-12.5c9.2-3.5 17.8-7.4 25.3-11.4C134.1 343.3 169.8 352 208 352zM448 176c0 112.3-99.1 196.9-216.5 207C255.8 457.4 336.4 512 432 512c38.2 0 73.9-8.7 104.7-23.9c7.5 4 16 7.9 25.2 11.4c18.3 6.9 40.3 12.5 62.1 12.5c6.9 0 13.1-4.5 15.2-11.1c2.1-6.6-.2-13.8-5.8-17.9l0 0 0 0-.2-.2c-.2-.2-.6-.4-1.1-.8c-1-.8-2.5-2-4.3-3.7c-3.6-3.3-8.5-8.1-13.3-14.3c-5.5-7-10.7-15.4-14.2-24.7c24.9-29 39.6-64.7 39.6-103.4c0-92.8-84.9-168.9-192.6-175.5c.4 5.1 .6 10.3 .6 15.5z"
+                  /></svg
+              ></a>
+            </li>
+          </ul>
+        </label>
+      </nav>
+      <!-- ===================== Navigation HTML markup END ========================== -->
+      <section class="article-landing-area">
+        <h1 class="article-main-heading">podcast blog post</h1>
+        <div class="article-container">
+            <article class="card">
+                <img src="./power.jpg" alt="A girl painting while wearing VR headset." class="article-img">
+                <h2 class="article-heading">The Power of Edutainment: How It Can Make Learning Fun and Engaging</h2>
+                <input role="button" class="button toggle" type="text" name="transcript" value="Show Transcript" readonly>
+                <audio controls class="transcript-audio">
+                    <source src="./The Power of Edutainment.wav" type="">
+                </audio>
+                <label for="show" class="paragraph-container">
+                    <p>
+                        Learning doesn't have to be boring! Edutainment, a combination of education and entertainment, can make learning fun and engaging for students of all ages. By incorporating interactive activities like games, simulations, and other technology-based tools, educators can help students better understand and retain information.
+                    </p>
+                    <p>
+                        Edutainment can make even the most complex subjects accessible and understandable. By breaking down concepts into smaller, more digestible pieces, students can better comprehend the material being taught. Furthermore, by providing a variety of learning methods, edutainment caters to all learning styles, including visual, auditory, and kinesthetic learners. 
+                    </p>
+                    <p>
+                        One of the most significant benefits of edutainment is that it makes learning more enjoyable. When students are engaged and having fun, they are more likely to be invested in the learning process. This leads to better retention of information and a deeper understanding of the material being taught. In short, edutainment is a powerful tool that can revolutionize the way we approach education, making it more accessible, inclusive, and enjoyable for everyone involved.
+                    </p>
+                </label>
+            </article>
+            <article class="card">
+                <img src="./physchology.jpg" alt="A group of people laughing while looking at a computor" class="article-img">
+                <h2 class="article-heading">The Psychology of Edutainment: Understanding How We Learn through Play and Entertainment</h2>
+                <input role="button" class="button toggle" type="text" name="transcript" value="Show Transcript" readonly>
+                <audio controls class="transcript-audio">
+                    <source src="./The Psychology of Edutainment.wav" type="">
+                </audio>
+                <label for="show" class="paragraph-container">
+                    <p>
+                      Did you know that play and entertainment can enhance our learning ability? This is the premise of the psychology of edutainment, which explores how we learn through fun and engaging activities. By understanding this concept, we can create more effective and enjoyable learning experiences for students.
+                    </p>
+                    <p>
+                      The psychology of edutainment shows that when we are engaged in entertaining activities, our brains release dopamine, a neurotransmitter associated with pleasure and reward. This creates a positive emotional state that enhances our ability to learn and remember information. It also promotes motivation and engagement, making us more receptive to the learning experience. Additionally, edutainment often involves experiential learning, which allows us to apply what we learn in a real-world context, making the information more meaningful and memorable.
+                    </p>
+                    <p>
+                      In conclusion, the psychology of edutainment is a powerful tool that can revolutionize the way we approach education. By incorporating fun and engaging activities into the learning process, we can create more effective and enjoyable learning experiences for students of all ages.
+                    </p>
+                </label>
+            </article>
+            <article class="card">
+                <img src="./minecraft.jpg" alt="Beautiful minecraft view" class="article-img" style="height: 11.5em;">
+                <h2 class="article-heading">From Minecraft to Math: The Power of Edutainment in Modern Education</h2>
+                <input role="button" class="button toggle" type="text" name="transcript" value="Show Transcript" readonly>
+                <audio controls class="transcript-audio">
+                    <source src="./From Minecraft to Math.wav" type="">
+                </audio>
+                <label for="show" class="paragraph-container">
+                    <p>
+                      Remember when your parents used to scold you for playing video games all day? Well, it turns out that they were wrong - playing video games can actually be good for you! With the rise of edutainment, even video games can be turned into powerful tools for learning. From Minecraft to math, edutainment is changing the game in modern education.
+                    </p>
+                    <p>
+                      By using games and other forms of edutainment, students can engage with learning in a way that feels less like work and more like play. This makes it easier to stay motivated and focused, and helps to create a positive emotional state that enhances our ability to learn and remember information. Plus, with the vast array of games and apps available, edutainment can be tailored to fit the needs and interests of virtually any student.
+                    </p>
+                    <p>
+                      In conclusion, edutainment is a game-changer in modern education. By incorporating fun and engaging activities into the learning process, we can create more effective and enjoyable learning experiences for students. So whether you're exploring a virtual world or practicing math skills with a game, remember - learning doesn't have to be boring!
+                    </p>
+                </label>
+            </article>
+            <article class="card">
+                <img src="./hacks.jpg" alt="A man working remotely on his laptop" class="article-img">
+                <h2 class="article-heading">Edutainment Hacks: How to Make Learning Fun and Memorable</h2>
+                <input role="button" class="button toggle" type="text" name="transcript" value="Show Transcript" readonly>
+                <audio controls class="transcript-audio">
+                    <source src="./Edutainment Hacks.wav" type="">
+                </audio>
+                <label for="show" class="paragraph-container">
+                    <p>
+                      Are you tired of traditional study methods that leave you feeling bored and uninterested? Well, look no further because we have some edutainment hacks that will make learning fun and memorable! One hack is to turn your notes into a game. Whether it's a trivia game or a matching game, turning your notes into a fun activity can make learning more engaging and interactive. Plus, it can help you remember the information better.
+                    </p>
+                    <p>
+                      Another hack is to use visuals like diagrams, charts, and graphs. Visuals can help simplify complex concepts and make them easier to understand. Plus, they can be a welcome break from the monotony of reading and note-taking. So, why not try these edutainment hacks and make learning a little less painful? With a little creativity and imagination, you can turn any subject into a fun and exciting learning experience.
+                    </p>
+                </label>
+            </article>
+            <article class="card">
+                <img src="./boringlectures.jpg" alt="A women sleeping on the laptop" class="article-img">
+                <h2 class="article-heading">Say Goodbye to Boring Lectures: Edutainment is the Future of Engaging Learning</h2>
+                <input role="button" class="button toggle" type="text" name="transcript" value="Show Transcript" readonly>
+                <audio controls class="transcript-audio">
+                    <source src="./Say Goodbye to Boring Lectures.wav" type="">
+                </audio>
+                <label for="show" class="paragraph-container">
+                    <p>
+                      Do you remember falling asleep during a boring lecture? Yeah, we've all been there. But guess what? Edutainment is the future of engaging learning! By incorporating entertainment into the learning process, you can make education a fun and exciting experience. This means incorporating music, games, videos, and interactive activities into the classroom. Not only will this keep students engaged, but it will also improve their retention and comprehension of the material.
+                    </p>
+                    <p>
+                      Edutainment isn't just for the classroom either - it can be applied to online learning as well. With the rise of e-learning, it's important to make sure that students are still engaged and motivated to learn. By using edutainment techniques like gamification and interactive videos, online learning can become just as engaging as traditional classroom learning. So, say goodbye to boring lectures and embrace edutainment as the future of engaging learning!
+                    </p>
+                </label>
+            </article>
+
+
+        </div>
+      </section>
+    </main>
+    <footer>
+      <p class="copywrites">&copy; 2023 - 2023 D S Senanayake College</p>
+    </footer>
+  </body>
+</html>
