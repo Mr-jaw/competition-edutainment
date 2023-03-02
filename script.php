@@ -1,6 +1,6 @@
 <?php
 if (isset($_POST['emailButton'])) {
-    $toEmail = $_POST['toEmail'];
+    $toEmail = $_POST['email'];
 
     $message = "Hello there, Congratulations on subscribing for the news letter";
 

@@ -118,8 +118,6 @@
     /* ========================================== Home page styling END ================================= */
 
     /* ======================================== About page styling Start ================================= */
-    .about-landing-page {
-    }
 
     .about-landing-page .about-question {
         font-size: 1.5rem;
@@ -171,9 +169,6 @@
 
     /* =========================== Article page styling START ============================================ */
 
-    .article-landing-area {
-    }
-
     .article-landing-area .article-main-heading {
         margin-top: 0;
         padding-bottom: .5em;
@@ -212,9 +207,6 @@
     /* =========================== Article page styling END ============================================ */
 
     /* ===========================  Resource page styling END ============================================= */
-
-    .resources-landing-area {
-    }
 
     .resources-landing-area .resouces-main-heading {
         margin-top: 1em;

@@ -53,6 +53,7 @@ main {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
     padding: 3em 2em;
 }
@@ -513,8 +514,7 @@ nav input:checked + .nav-button-container .background-blur {
 
 
 /* =================================== Resoruces page styling START =============================== */
-.resources-landing-area{
-}
+
 
 .resources-landing-area .resouces-main-heading {
     text-align: center;
@@ -594,15 +594,16 @@ nav input:checked + .nav-button-container .background-blur {
     font-weight: 500;
 }
 
-.contact-page .contact-content .contact-text-container .join-img {
-    transform: scale(1.5);
-}
 
 .contact-page .contact-content .social-link-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+.contact-page .contact-content .contact-text-container .join-img {
+    display: block;
+    margin: 0 auto;
 }
 
 .contact-page .contact-content .social-link-container .qr-img {
