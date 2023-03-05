@@ -1,5 +1,51 @@
 /* ////////////////////////// Animating elements Starts \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ */
 
+/* Animation with cross broswer compatibility :) */
+
+/* ========== flickering =============== */
+@-webkit-keyframes flickering {
+    0% {
+        opacity: 0;
+    }
+    
+    50% {
+        opacity: 1;
+    }
+    
+    100% {
+        opacity: 0;
+    }
+}
+
+@-moz-keyframes flickering {
+    0% {
+        opacity: 0;
+    }
+    
+    50% {
+        opacity: 1;
+    }
+    
+    100% {
+        opacity: 0;
+    }
+}
+
+
+@-o-keyframes flickering {
+    0% {
+        opacity: 0;
+    }
+    
+    50% {
+        opacity: 1;
+    }
+    
+    100% {
+        opacity: 0;
+    }
+}
+
 @keyframes flickering {
     0% {
         opacity: 0;
@@ -15,9 +61,18 @@
 }
 
 
-@keyframes fade-in {
+
+
+
+
+
+
+
+
+@-webkit-keyframes fade-in {
     0% {
         opacity: 0;
+        visibility: hidden;
     }
     
     60% {
@@ -26,6 +81,55 @@
     
     100% {
         opacity: 1;
+        visibility: visible;
+    }
+}
+
+@-moz-keyframes fade-in {
+    0% {
+        opacity: 0;
+        visibility: hidden;
+    }
+    
+    60% {
+        opacity: .7;
+    }
+    
+    100% {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+@-o-keyframes fade-in {
+    0% {
+        opacity: 0;
+        visibility: hidden;
+    }
+    
+    60% {
+        opacity: .7;
+    }
+    
+    100% {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+        visibility: hidden;
+    }
+    
+    60% {
+        opacity: .7;
+    }
+    
+    100% {
+        opacity: 1;
+        visibility: visible;
     }
 }
 

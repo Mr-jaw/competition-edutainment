@@ -41,7 +41,6 @@
     }
 
     nav .nav-menue {
-        position: fixed;
         display: flex;
         width: inherit;
         max-height: 100%;
@@ -86,7 +85,6 @@
     /* ================================== Home page styling START ======================================== */
 
     .home-landing-area {
-        max-width: 60em;
         display: grid;
         grid-template-columns: repeat(4, 1fr);
     }
@@ -127,12 +125,14 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+        gap: 1em;
     }
 
     .about-landing-page .content .edutainment-definition .aboutdescription {
         width: 30em;
-        font-size: 1rem;
+        font-size: 1.1rem;
         margin: 3em 0 2em 0;
+        line-height: 2;
     }
 
     .about-landing-page .content .quote-container .q-wrapper .quote {
@@ -265,7 +265,6 @@
     }
 
     .contact-page {
-        max-width: 60em;
         align-items: start;
     }
 
@@ -275,7 +274,8 @@
 
     .contact-page .contact-description {
         text-align: left;
-        font-size: 1.5rem;
+        font-size: 1.3rem;
+        line-height: 1.85;
         padding-top: 2em;
     }
 
@@ -285,14 +285,21 @@
 
     .contact-page .contact-content .social-link-container {
         padding-left: 8em;
-        transform: translateY(-5em);
+        padding-top: 2em;
+        gap: 3em; 
+    }
+
+    .contact-page .contact-content .social-link-container .newsletter {
+        display: grid;
+        gap: 1em;
     }
 
     .contact-page .contact-content .social-link-container .input-container {
         flex-direction: row;
     }
-
+    
     .contact-page .contact-content .social-link-container .input-container button {
+        margin: 0;
         transform: none;
         border-radius: 0 .7em .7em 0;
     }
