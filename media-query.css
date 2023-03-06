@@ -75,12 +75,11 @@
         border-radius: .5em;
         opacity: 0;
         visibility: hidden;
-        transition: .5s ease-in-out;
-        -webkit-transition: .5s ease-in-out;
-        -moz-transition: .5s ease-in-out;
-        -o-transition: .5s ease-in-out;
+        transition: opacity .5s ease-in-out;
+        -webkit-transition: opacity .5s ease-in-out;
+        -moz-transition: opacity .5s ease-in-out;
+        -o-transition: opacity .5s ease-in-out;
         box-shadow: 0 0 .3em .15em var(--dark-gray);
-
     }
 
     nav .nav-menue .nav-list .list-link {
