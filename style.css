@@ -516,18 +516,10 @@ nav input:checked + .nav-button-container .background-blur {
     margin: 3em 0;
     border: .18em solid var(--dark-pruple);
     opacity: 0;
-    transition: transform .3s ease-in-out ;
-    -webkit-transition: transform .3s ease-in-out;
-    -moz-transition: transform .3s ease-in-out;
-    -o-transition: transform .3s ease-in-out;
     animation: fade-in 1.5s ease-in-out .8s forwards;
     -webkit-animation: fade-in 1.5s ease-in-out .8s forwards;
     -moz-animation: fade-in 1.5s ease-in-out .8s forwards;
     -o-animation: fade-in 1.5s ease-in-out .8s forwards;
-}
-
-.article-landing-area .article-container .card:hover {
-    transform: scale(107%);
 }
 
 
