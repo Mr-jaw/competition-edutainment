@@ -356,6 +356,7 @@ nav input:checked + .nav-button-container .background-blur {
     left: -1.65em;
     position: absolute;
     width: .9em;
+    border-radius: 1em;
     height: .14em;
     background-color: var(--white);
     animation: flickering 1.3s infinite ease-in-out;
