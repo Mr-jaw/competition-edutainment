@@ -222,6 +222,10 @@ nav .nav-menue .nav-list {
     list-style-type: none;
 }
 
+nav .nav-menue .nav-list .list-item .tooltip {
+    display: none;
+}
+
 .nav-list .list-link:active svg  {
     color: var(--purple);
 }
@@ -297,14 +301,14 @@ nav input:checked + .nav-button-container .background-blur {
 }
 
 .home-landing-area .heading-main {
-    font-size: .9rem;
+    font-size: 1.3rem;
     letter-spacing: .1em;
     font-weight: 700;
     text-transform: uppercase;
     position: relative;
     display: inline-block;
     color: var(--purple);
-    margin: 2em -1em 1em 0;
+    margin: 2em -1em 0 0;
     opacity: 0;
     -webkit-animation: fade-in 1s ease-in-out .4s forwards;
     -moz-animation: fade-in 1s ease-in-out .4s forwards;
@@ -412,7 +416,7 @@ nav input:checked + .nav-button-container .background-blur {
 
 .about-landing-page .content .about-video {
     margin: 2em 0 0 0;
-    border-bottom: .18em solid var(--purple);
+    border-bottom: .185em solid var(--purple);
     opacity: 0;
     -webkit-animation: fade-in 1s ease-in-out .8s forwards;
     -moz-animation: fade-in 1s ease-in-out .8s forwards;

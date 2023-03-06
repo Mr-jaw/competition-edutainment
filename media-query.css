@@ -58,6 +58,31 @@
         flex-direction: column;
     }
 
+    nav .nav-menue .nav-list .list-item {
+        position: relative;
+    }
+
+    nav .nav-menue .nav-list .list-item .tooltip {
+        display: block;
+        position: absolute;
+        top: 25%;
+        left: 125%;
+        font-size: .8rem;
+        background-color: var(--purple);
+        text-align: center;
+        padding: .3em .5em;
+        white-space: nowrap;
+        border-radius: .5em;
+        opacity: 0;
+        visibility: hidden;
+        transition: .5s ease-in-out;
+        -webkit-transition: .5s ease-in-out;
+        -moz-transition: .5s ease-in-out;
+        -o-transition: .5s ease-in-out;
+        box-shadow: 0 0 .3em .15em var(--dark-gray);
+
+    }
+
     nav .nav-menue .nav-list .list-link {
         display: flex;
         justify-content: center;
@@ -67,6 +92,12 @@
         height: 2.7em;
         border-radius: 50%;
         transition: .5s ease-in-out;
+        position: relative;
+    }
+
+    nav .nav-menue .nav-list .list-link:hover + .tooltip {
+        opacity: 1;
+        visibility: visible;
     }
 
     nav .nav-menue .nav-list .list-link:hover {
@@ -209,7 +240,7 @@
     /* ===========================  Resource page styling END ============================================= */
 
     .resources-landing-area .resouces-main-heading {
-        margin-top: 1em;
+        margin-top: 0;
         font-size: 2rem;
     }
 
@@ -218,12 +249,24 @@
         grid-template-columns: repeat(10, 1fr);
         gap: 1rem;
         margin-bottom: 4rem;
+        perspective: 80em;
     }
 
     .resources-landing-area .resource-container .website-img {
         grid-column: 1/6;
         grid-row: 1/2;
         transition: .5s ease-in-out;
+        transform: rotateY(25deg);
+        z-index: -1;
+        pointer-events: initial;
+    }
+
+    .resources-landing-area .resource-container.reversed .website-img {
+        transform: rotateY(-25deg);
+    }
+
+    .resources-landing-area .resource-container .website-img:hover {
+        transform: rotateY(0);
     }
 
     .resources-landing-area .txt-area {
