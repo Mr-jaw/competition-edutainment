@@ -11,14 +11,14 @@
     --magenta-pink: rgb(156, 81, 255);
 }
 
-
+/* Importing custom font */
 
 @font-face {
     font-family: "Inter";
     src: url('./Inter-VariableFont.ttf') format('truetype');
 }
 
-/* Resetting the default values for better control */
+/* Resetting the default values for better control on elements */
 
 html {
     box-sizing: border-box;
@@ -38,6 +38,14 @@ html {
 }
 
 
+/* styling selection effect */
+
+*::selection {
+    background-color: var(--dark-pruple)
+}
+
+/* setting background designs */
+
 body {
     background-color: var(--dark-black);
     background-image: url('./backgrundtop-mobile.png'), url('./backgroundbottom-mobile.png');
@@ -46,8 +54,9 @@ body {
     background-size: 100%,100%;
     color: var(--white);
     position: relative;
-    
 }
+
+/* Set the main component to be the height of the screen and center the child components. */
 
 main {
     min-height: 100vh;
@@ -58,6 +67,7 @@ main {
     padding: 3em 2em;
 }
 
+/* universal element styling */
 
 img {
     max-width: 30em;
@@ -74,6 +84,7 @@ video {
     max-width: 35em;
     width: 100%;
     border-radius: .6em;
+    
 }
 
 
@@ -95,7 +106,6 @@ svg {
 }
 
 footer {
-
     background-color: var(--dark-gray);
     width: 100%;
     text-align: center;
@@ -132,9 +142,10 @@ footer {
 
 /* universal button style End */
 
-/*======================== Navigation button/menue syling Start ============================== */
+/*======================== Navigation button/menu syling START ============================== */
 
 
+/* Nav hamburger menu styling */
 
 nav .nav-button {
     background-color: var(--dark-pruple);
@@ -196,7 +207,9 @@ nav input {
     display: none;
 }
 
-nav .nav-menue {
+/* Styling navigation menu */
+
+nav .nav-menu {
     position: fixed;
     width: 100%;
     top: 0;
@@ -214,7 +227,7 @@ nav .nav-menue {
     border-bottom: .2em solid var(--purple);
 }
 
-nav .nav-menue .nav-list {
+nav .nav-menu .nav-list {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -222,7 +235,7 @@ nav .nav-menue .nav-list {
     list-style-type: none;
 }
 
-nav .nav-menue .nav-list .list-item .tooltip {
+nav .nav-menu .nav-list .list-item .tooltip {
     display: none;
 }
 
@@ -231,7 +244,7 @@ nav .nav-menue .nav-list .list-item .tooltip {
 }
 
 
-/* setting background blur on navigatiion menu active */
+/* setting background blur when navigation menu is active */
 nav .nav-button-container .background-blur {
     position: absolute;
     width: 100%;
@@ -251,7 +264,7 @@ nav .nav-button-container .background-blur {
 
 
 /* revealing menu when the menu button is clicked */
-nav input:checked ~ .nav-menue{
+nav input:checked ~ .nav-menu{
     transform: translateY(0);
     visibility: visible;
 }
@@ -266,7 +279,7 @@ nav input:checked + .nav-button-container .background-blur {
 }
 
 
-/* ================================= Navigation button/menue syling END  =================================*/
+/* ================================= Navigation button/menu syling END  =================================*/
 
 
 /* ================================= Home page styling START ======================================== */
@@ -285,7 +298,6 @@ nav input:checked + .nav-button-container .background-blur {
     -moz-animation: fade-in 1s ease-in-out .2s forwards;
     -o-animation: fade-in 1s ease-in-out .2s forwards;
     animation: fade-in 1s ease-in-out .2s forwards;
-    
 }
 
 .home-landing-area .text-area {
@@ -332,14 +344,6 @@ nav input:checked + .nav-button-container .background-blur {
 
 /* selection style for the elements */
 
-:is(.home-landing-area .heading-secondary , .home-landing-area .heading-main, .home-landing-area .heading-secondary > span)::selection {
-    background-color: var(--dark-pruple);
-}
-
-.home-landing-area .homepage-decorative-image::selection {
-    background-color: transparent;
-}
-
 .home-landing-area .heading-secondary > span {
     color: var(--purple);
 }
@@ -385,7 +389,6 @@ nav input:checked + .nav-button-container .background-blur {
     animation: fade-in 1s ease-in-out .4s forwards;
 }
 
-
 .about-landing-page .aboutdescription {
     margin: 4em 0 3em 0;
     font-size: .9rem;
@@ -404,7 +407,6 @@ nav input:checked + .nav-button-container .background-blur {
     animation: fade-in 1s ease-in-out 1.2s forwards;
 }
 
-
 .about-landing-page .content {
     display: flex;
     flex-direction: column;
@@ -413,6 +415,7 @@ nav input:checked + .nav-button-container .background-blur {
     gap: 1em;
 }
 
+/* styling about video element */
 
 .about-landing-page .content .about-video {
     margin: 2em 0 0 0;
@@ -423,7 +426,6 @@ nav input:checked + .nav-button-container .background-blur {
     -o-animation: fade-in 1s ease-in-out .8s forwards;
     animation: fade-in 1s ease-in-out .8s forwards;
 }
-
 
 .about-landing-page .content .quote-container {
     max-width: 35em;
@@ -475,6 +477,7 @@ nav input:checked + .nav-button-container .background-blur {
 .about-landing-page .content .quote-container .q-wrapper > svg:first-child{
     margin-right: 1em;
 }
+
 .about-landing-page .content .quote-container .q-wrapper > svg:last-child{
     transform: translateY(1em);
     margin-left: 1em;
@@ -484,7 +487,7 @@ nav input:checked + .nav-button-container .background-blur {
     display: none;
 }
 
-/* =================================== About page styling end =============================== */
+/* =================================== About page styling END =============================== */
 
 /* =========================== Article page styling START ============================================ */
 
@@ -505,7 +508,6 @@ nav input:checked + .nav-button-container .background-blur {
     animation: fade-in 1s ease-in-out .4s forwards;
 }
 
-
 .article-landing-area .article-container .card {
     background-color: var(--darktransparent-purple);
     padding: 1.2em;
@@ -522,7 +524,6 @@ nav input:checked + .nav-button-container .background-blur {
     -o-animation: fade-in 1.5s ease-in-out .8s forwards;
 }
 
-
 .article-landing-area .article-container .card .article-img {
     border-radius: .6em;
     max-width: 100%;
@@ -537,7 +538,6 @@ nav input:checked + .nav-button-container .background-blur {
     cursor: default;
 }
 
-
 .article-landing-area .article-container .card  label {
     cursor: pointer;
     width: fit-content;
@@ -545,8 +545,6 @@ nav input:checked + .nav-button-container .background-blur {
     font-size: .9rem;
     margin: 1em auto;
 }
-
-
 
 .article-landing-area .article-container .card .transcript-audio {
     width: 15em;
@@ -581,6 +579,8 @@ nav input:checked + .nav-button-container .background-blur {
     margin: 0 auto;
 }
 
+/* making transcript interactive */
+
 .article-landing-area .article-container .card .toggle:focus ~ .paragraph-container, .article-landing-area .article-container .card .show-transcript:focus ~ .hide-transcript {
     display: block;
 
@@ -614,7 +614,6 @@ nav input:checked + .nav-button-container .background-blur {
     -o-animation: fade-in 1s ease-in-out .4s forwards;
     animation: fade-in 1s ease-in-out .4s forwards;
 }
-
 
 .resources-landing-area .txt-area .web-direct-link{
     font-weight: 600;
@@ -663,16 +662,16 @@ nav input:checked + .nav-button-container .background-blur {
 /* =================================== Resoruces page styling END =============================== */
 
 
-/* =================================== Contact page styling Start ============================= */
+/* =================================== join page styling START ============================= */
 
-.contact-page {
+.join-page {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 
-.contact-page .contact-heading {
+.join-page .join-heading {
     opacity: 0;
     animation: fade-in 1s ease-in-out .3s forwards;
     -webkit-animation: fade-in 1s ease-in-out .3s forwards;
@@ -683,7 +682,7 @@ nav input:checked + .nav-button-container .background-blur {
     font-weight: 700;
 }
 
-.contact-page .contact-description {
+.join-page .join-description {
     padding: 1.5em 0 0 0;
     line-height: 1.6;
     font-size: 1.1rem;
@@ -697,7 +696,7 @@ nav input:checked + .nav-button-container .background-blur {
 }
 
 
-.contact-page .contact-content .social-link-container {
+.join-page .join-content .social-link-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -705,12 +704,12 @@ nav input:checked + .nav-button-container .background-blur {
     padding: 5em 0 2em 0;
 }
 
-.contact-page .contact-content .contact-text-container {
+.join-page .join-content .join-text-container {
     display: grid;
     gap: 1.5em;
 }
 
-.contact-page .contact-content .contact-text-container .join-img {
+.join-page .join-content .join-text-container .join-img {
     display: block;
     margin: 0 auto;
     opacity: 0;
@@ -720,7 +719,7 @@ nav input:checked + .nav-button-container .background-blur {
     -o-animation: fade-in 1s ease-in-out .9s forwards;
 }
 
-.contact-page .contact-content .social-link-container .qr-container {
+.join-page .join-content .social-link-container .qr-container {
     display: grid;
     place-items: center;
     gap: .5em;
@@ -731,7 +730,7 @@ nav input:checked + .nav-button-container .background-blur {
     -o-animation: fade-in 1s ease-in-out 1.2s forwards;
 }
 
-.contact-page .contact-content .social-link-container .qr-img {
+.join-page .join-content .social-link-container .qr-img {
     max-width: 13em;
     display: block;
     border: .3em solid var(--purple);
@@ -739,12 +738,12 @@ nav input:checked + .nav-button-container .background-blur {
     position: relative;
 }
 
-.contact-page .contact-content .social-link-container .qr-container strong {
+.join-page .join-content .social-link-container .qr-container strong {
     font-size: 1.2rem;
     color: var(--purple);
 }
 
-.contact-page .contact-content .social-link-container .newsletter {
+.join-page .join-content .social-link-container .newsletter {
     opacity: 0;
     animation: fade-in 1s ease-in-out 1.5s forwards;
     -webkit-animation: fade-in 1s ease-in-out 1.5s forwards;
@@ -752,18 +751,18 @@ nav input:checked + .nav-button-container .background-blur {
     -o-animation: fade-in 1s ease-in-out 1.5s forwards;
 }
 
-.contact-page .contact-content .social-link-container .newsletter .news-letter-heading{
+.join-page .join-content .social-link-container .newsletter .news-letter-heading{
     text-align: center;
     font-weight: 600;
     padding: 3em 0 1.5em 0;
 }
 
-.contact-page .contact-content .social-link-container .input-container {
+.join-page .join-content .social-link-container .input-container {
     display: flex;
     flex-direction: column;
 }
 
-.contact-page .contact-content .social-link-container .input-container button {
+.join-page .join-content .social-link-container .input-container button {
     font-size: 1rem;
     letter-spacing: .05em;
     font-weight: 500;
@@ -777,13 +776,13 @@ nav input:checked + .nav-button-container .background-blur {
     transform: translateY(1em);
 }
 
-.contact-page .contact-content .social-link-container .input-container button:hover {
+.join-page .join-content .social-link-container .input-container button:hover {
     background-color: var(--dark-pruple);
     box-shadow: 0 0 .5em .05em var(--purple);
 
 }
 
-.contact-page .contact-content .social-link-container .input-container input {
+.join-page .join-content .social-link-container .input-container input {
     border: none;
     border-radius: .7em;
     font-size: 1rem;
@@ -798,14 +797,13 @@ nav input:checked + .nav-button-container .background-blur {
     padding: 1em;
 }
 
-.contact-page .contact-content .social-link-container .input-container input:focus {
+.join-page .join-content .social-link-container .input-container input:focus {
     outline: .15em solid var(--purple);
 }
 
-
 /* setting styled line before join heading */
 
-.contact-page .contact-heading::before {
+.join-page .join-heading::before {
     content: "";
     top: 45%;
     left: -1.25em;
@@ -819,11 +817,19 @@ nav input:checked + .nav-button-container .background-blur {
     animation: flickering 1.3s infinite ease-in-out;
 }
 
+/* ===========================  join page styling END ============================================= */
 
-/* ===========================  Contact page styling END ============================================= */
+/* Styling selection transparent effect for images */
+
+:is(
+    .home-landing-area .homepage-decorative-image,
+    .article-landing-area .article-container .card .article-img,
+    .resources-landing-area .website-img,
+    .join-page .join-content .join-text-container .join-img,
+    .join-page .join-content .social-link-container .qr-img
+    )::selection {
+    background-color: transparent;
+}
 
 
-
-
-
-          /* :::::::::::::::::::::::::: END OF CSS ::::::::::::::::::::::::::: */
+                 /* :::::::::::::::::::::::::: END OF CSS ::::::::::::::::::::::::::: */        

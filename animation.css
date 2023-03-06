@@ -2,7 +2,7 @@
 
 /* Animation with cross broswer compatibility :) */
 
-/* ========== flickering =============== */
+/* ========== flickering animation =============== */
 @-webkit-keyframes flickering {
     0% {
         opacity: 0;
@@ -62,12 +62,7 @@
 
 
 
-
-
-
-
-
-
+/* ========== Fade-in animation =============== */
 
 @-webkit-keyframes fade-in {
     0% {
